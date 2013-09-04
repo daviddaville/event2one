@@ -22,7 +22,7 @@ Add your authentication tokens to make this example work:
 ### getPartners example ###
 
 	try{
-		$partners= $e2o->getPartners(array('id_event'=>'950'));
+		$partners= $e2o->getPartners(array('id_event'=>ID_EVENT));
 	
 		if(is_array($partners)){
 
@@ -51,3 +51,31 @@ Add your authentication tokens to make this example work:
 	catch (Exception $e){
 		echo $e->getMessage();
 	}	
+
+
+### contact_get example ###
+ 
+		 try{
+		 	$contact= $e2o->contact_get(array(	'id_event'=>'ID_EVENT', 
+		 						'id_contact'=>ID_CONTACT)
+		 								);
+		  
+		 		echo '<table class="table">';
+		 
+		 
+		 			echo '<tr>
+		
+					 <td>'.utf8_decode($contact['prenom']).'</td>
+		 			<td>'.utf8_decode($contact['nom']).'</td>
+					<td>'.utf8_decode($contact['fonction']).'</td>
+		 			<td>'.utf8_decode($contact['societe']).'</td>
+		 			<td>'.utf8_decode($contact['edito_long']).'</td>
+		 			<td>'.utf8_decode($contact['edito_court']).'</td>
+					 </tr>';
+		 
+		 	 echo '</table>';
+		 }
+		 catch (Exception $e){
+		 
+		 	echo $e->getMessage();
+		 }

@@ -55,11 +55,11 @@ Add your authentication tokens to make this example work:
 
 ### contact_get example ###
  
-		 try{
-		 	$contact= $e2o->contact_get(array(	'id_event'=>'ID_EVENT', 
+	try{
+		$contact= $e2o->contact_get(array(	'id_event'=>'ID_EVENT', 
 		 						'id_contact'=>ID_CONTACT)
 		 								);
-		  	echo '<table class="table">
+		 echo '<table class="table">
 		 		<tr>
 		 			<td>'.utf8_decode($contact['prenom']).'</td>
 		 			<td>'.utf8_decode($contact['nom']).'</td>
@@ -74,3 +74,32 @@ Add your authentication tokens to make this example work:
 		 
 		 	echo $e->getMessage();
 		 }
+
+
+
+### event_list_demo example ###
+
+	try{
+		$listDemos= $e2o->event_list_demo(array('id_event'=>ID_EVENT));
+		if(is_array($listDemos)){
+			
+			echo '<table class="table">';
+		 	foreach ($listDemos as $demo){
+		 	
+			 	echo '<tr>
+					 <td>'.$demo['id_presta'].'</td>
+					 <td>'.utf8_decode($demo['presta_nom']).'</td>
+				 	<td>'.utf8_decode($demo['presta_accroche']).'</td>
+				 	<td>'.$demo['presta_visuel'].'</td>
+					<td>'.utf8_decode($demo['id_contact']['prenom']).'</td>
+				 	<td>'.utf8_decode($demo['id_contact']['nom']).'</td>
+					<td>'.utf8_decode($demo['id_contact']['societe']).'</td>
+					<td>'.$demo['id_contact']['logo'].'</td>
+			 	</tr>';
+			}
+	 		echo '</table>';
+	 	}
+ 	}
+ 	catch (Exception $e){
+		echo $e->getMessage();
+ 	}

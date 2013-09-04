@@ -77,10 +77,10 @@ Add your authentication tokens to make this example work:
 
 
 
-### event_list_demo example ###
+### event_list_demos example ###
 
 	try{
-		$listDemos= $e2o->event_list_demo(array('id_event'=>ID_EVENT));
+		$listDemos= $e2o->event_list_demos(array('id_event'=>ID_EVENT));
 		if(is_array($listDemos)){
 			
 			echo '<table class="table">';

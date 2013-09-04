@@ -59,21 +59,16 @@ Add your authentication tokens to make this example work:
 		 	$contact= $e2o->contact_get(array(	'id_event'=>'ID_EVENT', 
 		 						'id_contact'=>ID_CONTACT)
 		 								);
-		  
-		 		echo '<table class="table">';
-		 
-		 
-		 			echo '<tr>
-		
-					 <td>'.utf8_decode($contact['prenom']).'</td>
+		  	echo '<table class="table">
+		 		<tr>
+		 			<td>'.utf8_decode($contact['prenom']).'</td>
 		 			<td>'.utf8_decode($contact['nom']).'</td>
 					<td>'.utf8_decode($contact['fonction']).'</td>
 		 			<td>'.utf8_decode($contact['societe']).'</td>
 		 			<td>'.utf8_decode($contact['edito_long']).'</td>
 		 			<td>'.utf8_decode($contact['edito_court']).'</td>
-					 </tr>';
-		 
-		 	 echo '</table>';
+				</tr>
+			</table>';
 		 }
 		 catch (Exception $e){
 		 

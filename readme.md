@@ -49,6 +49,5 @@ Add your authentication tokens to make this example work:
 		}
 	}
 	catch (Exception $e){
-	
 		echo $e->getMessage();
 	}	

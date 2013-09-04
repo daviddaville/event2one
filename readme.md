@@ -69,11 +69,10 @@ Add your authentication tokens to make this example work:
 		 			<td>'.utf8_decode($contact['edito_court']).'</td>
 				</tr>
 			</table>';
-		 }
-		 catch (Exception $e){
-		 
-		 	echo $e->getMessage();
-		 }
+	}
+	catch (Exception $e){
+		echo $e->getMessage();
+	}
 
 
 

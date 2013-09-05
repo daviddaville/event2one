@@ -104,3 +104,19 @@ Add your authentication tokens to make this example work:
  	catch (Exception $e){
 		echo $e->getMessage();
  	}
+
+
+### conferences_list example ###
+	$programm = $e2o->conferences_list(array('id_event'=>ID_EVENT));
+
+	echo '<table class="table">';
+	foreach ($programm as $conf){
+		
+		echo '<tr>
+			<td>'.$conf['heure_debut'].' - '.$conf['heure_fin'].'</td>
+			<td>'.$conf['conf_event_code'].'</td>
+			<td>'.$conf['conf_event_code'].'</td>
+			<td>'.utf8_decode($conf['title']).'</td>
+			</tr>';
+	}
+	echo '</table>';

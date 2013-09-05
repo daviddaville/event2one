@@ -32,21 +32,20 @@ Add your authentication tokens to make this example work:
 			foreach ($partners as $part){
 				
 				echo '<tr>
-						<td>'.$part['id_contact']['id_contact'].'</td>
-						<td>'.utf8_decode($part['prenom']).'</td>
-						<td>'.utf8_decode($part['nom']).'</td>
-						<td>'.utf8_decode($part['societe']).'</td>
-						<td>'.utf8_decode($part['adresse']).'</td>
-						<td>'.$part['cp'].'</td>
-						<td>'.$part['tel'].'</td>
-						<td>'.$part['mail'].'</td>
-						<td>'.$part['port'].'</td>		
-						<td>'.$part['statut'].'</td>
-						<td>'.$part['fax'].'</td>
-						<td>'.$part['web'].'</td>
-						<td>'.$part['id_conf_event'].'</td>
-					
-					</tr>';
+					<td>'.$part['id_contact']['id_contact'].'</td>
+					<td>'.utf8_decode($part['prenom']).'</td>
+					<td>'.utf8_decode($part['nom']).'</td>
+					<td>'.utf8_decode($part['societe']).'</td>
+					<td>'.utf8_decode($part['adresse']).'</td>
+					<td>'.$part['cp'].'</td>
+					<td>'.$part['tel'].'</td>
+					<td>'.$part['mail'].'</td>
+					<td>'.$part['port'].'</td>		
+					<td>'.$part['statut'].'</td>
+					<td>'.$part['fax'].'</td>
+					<td>'.$part['web'].'</td>
+					<td>'.$part['id_conf_event'].'</td>
+				</tr>';
 			}
 			echo '</table>';
 		}
